@@ -1,21 +1,25 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import React from "react";
+import { StyleSheet, SafeAreaView, ScrollView } from "react-native";
+import PhotoCard from "./components/PhotoCard";
 
 export default function App() {
+  const users = ["igormcsouza", "yyx990803"];
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={styles.container}>
+      <ScrollView>
+        {users.map((user) => (
+          <PhotoCard key={user} user={user} />
+        ))}
+      </ScrollView>
+      {/* <StatusBar style="auto" /> */}
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#333",
   },
 });
