@@ -16,13 +16,13 @@ const PhotoCard: React.FC<{ user: string }> = (props) => {
   }, [like]);
 
   return (
-    <View>
-      <View style={{ flexDirection: "row", padding: 15, alignItems: "center" }}>
+    <View style={{ paddingBottom: 15 }}>
+      <View style={{ flexDirection: "row", padding: 20, alignItems: "center" }}>
         <Image
           style={{ marginRight: 15, width: 40, height: 40, borderRadius: 20 }}
           source={{ uri: `https://github.com/${props.user}.png` }}
         />
-        <Text style={{ fontWeight: "bold" }}>@{props.user}</Text>
+        <Text style={{ fontWeight: "bold", fontSize: 20 }}>{props.user}</Text>
       </View>
 
       <Image
