@@ -61,3 +61,19 @@ follow the step by step on your console.
 
 If you don't want to use Expo Great Building Process (Why you wouldn't?) you can
 always get your code and build on the old fashion way!
+
+## Troubleshooting
+
+### Expo Dev Tools not loading
+
+Expo Dev Tools wasn't loading for me, some how, for this case I search on github
+and found
+[this](https://github.com/expo/expo-cli/issues/866#issuecomment-757410494)
+comment which fixed my issue just fine. Just copy and paste the link instead of
+right-clicking on it.
+
+### Running on device returning Timeout
+
+When I read the QRCode I got on my cellphone the Timeout error. So, I decided to
+change the method on Expo Dev Tools to **Tunnel** and read the QRcode again. It
+worked perfectly.
